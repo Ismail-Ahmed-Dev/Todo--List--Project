@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import TodoList from "./Components/TodoList";
+import { useContext } from "react";
+import { TodoContext } from "./Contexts/TodoContext";
+import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: ["myFont"],
+  },
+});
+
+const todoList = [];
 
 function App() {
+  const [todos, setTodos] = useState(todoList);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+    <TodoContext.Provider value={{ todos, setTodos }}>
+      <div className="App">
+        <TodoList />
+      </div>
+    </TodoContext.Provider>
+    </ThemeProvider>
   );
 }
 

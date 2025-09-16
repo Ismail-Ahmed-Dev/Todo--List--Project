@@ -1,5 +1,14 @@
 .App {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* min-height: 100vh; */
+  background-color: #282c34;
   text-align: center;
+  /* padding:100px 0; */
+  /* padding: 60px 0; */
 }
 
 .App-logo {
@@ -36,3 +45,31 @@
     transform: rotate(360deg);
   }
 }
+
+.iconHover {
+  transition: all 0.3s;
+}
+
+.iconHover:hover {
+  background-color: #c5c5c5 !important;
+  box-shadow: 0px 7px 7px rgb(0, 0, 0, 0.4) !important;
+}
+
+.iconBoxShadow {
+  transition: all 0.3s !important;
+}
+
+.iconBoxShadow:hover {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0px 7px 7px rgb(0, 0, 0, 0.5) !important;
+}
+
+
+/* Custom Fonts */
+
+@font-face{
+  font-family: myFont;
+  src:url("/public/Fonts/VarelaRound-Regular.ttf")
+}
+/* Custom Fonts */
