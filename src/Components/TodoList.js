@@ -75,7 +75,7 @@ export default function TodoList() {
         }}
       >
         <CardContent>
-          <Typography variant="h2">My Todo List</Typography>
+          <Typography variant="h2">My To-do List</Typography>
 
           <Divider variant="middle" />
 
@@ -127,3 +127,4 @@ export default function TodoList() {
     </Container>
   );
 }
+
