@@ -26,10 +26,10 @@ This project helps you manage your daily tasks with ease ✅.
 ---
 
 ## 📂 Project Structure
-  ┣ 📁 components   # Reusable components (TodoCard, Dialog, etc.)
-                   ┣ 📁 context      # useContext for global state
-                                ┣ 📄 App.js       # Main app entry
-                                ┗ 📄 index.js     # ReactDOM render
+┣ 📁 components   # Reusable components (TodoCard, Dialog, etc.)
+┣ 📁 context      # useContext for global state
+┣ 📄 App.js       # Main app entry
+┗ 📄 index.js     # ReactDOM render
 
 
 ---
